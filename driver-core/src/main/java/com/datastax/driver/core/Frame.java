@@ -245,7 +245,8 @@ class Frame {
                     int streamId = protocolVersion > 2 ?
                             buffer.getShort(curIndex + 2) :
                             buffer.getByte(curIndex + 2);
-                    throw new FrameTooLongException(streamId);
+//                    throw new FrameTooLongException(streamId);
+                    throw e;
                 }
             }
         }
